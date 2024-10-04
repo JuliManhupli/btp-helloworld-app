@@ -1,12 +1,34 @@
 <mvc:View controllerName="sap.btp.helloworldui5.controller.View1"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:core="sap.ui.core"
     xmlns="sap.m">
-    <Page id="page" title="Hello Word App by Yuliia Manhupli">
+    <Page id="page" title="Hello World App by Yuliia Manhupli">
         <content>
-        <FlexBox direction="Row" alignItems="Center" class="sapUiTinyMarginBottom" id="FlexBox0">
-        <Text text="Accept the button" class="sapUiTinyMarginEnd" id="Text0" />
-        <Button xmlns="sap.m" text="Click the Button" id="Button0" press=".onPress"/>
-        </FlexBox>
+            <FlexBox direction="Row" alignItems="Center" class="sapUiTinyMarginBottom" id="FlexBox3">
+                <Text text="Accept the button" class="sapUiTinyMarginEnd" id="Text3" />
+                <Button xmlns="sap.m" text="Click the Button" id="Button0" press=".onPress"/>
+            </FlexBox>
+            <FlexBox direction="Row" alignItems="Center" class="sapUiTinyMarginBottom" id="FlexBox0">
+                <Text text="Enter first number:" class="sapUiTinyMarginEnd" id="Text0" />
+                <Input id="inputNumber1" type="Number" class="sapUiTinyMarginEnd"/>
+            </FlexBox>
+            <FlexBox direction="Row" alignItems="Center" class="sapUiTinyMarginBottom" id="FlexBox1">
+                <Text text="Enter second number:" class="sapUiTinyMarginEnd" id="Text1" />
+                <Input id="inputNumber2" type="Number" class="sapUiTinyMarginEnd"/>
+            </FlexBox>
+            <FlexBox direction="Row" alignItems="Center" class="sapUiTinyMarginBottom" id="FlexBox2">
+                <Text text="Select operation:" class="sapUiTinyMarginEnd" id="Text2" />
+                <Select id="operationSelect" class="sapUiTinyMarginEnd">
+                    <items>
+                        <core:Item key="add" text="Add" id="itemAdd"/>
+                        <core:Item key="subtract" text="Subtract" id="itemSubtract"/>
+                        <core:Item key="multiply" text="Multiply" id="itemMultiply"/>
+                        <core:Item key="divide" text="Divide" id="itemDivide"/>
+                    </items>
+                </Select>
+            </FlexBox>
+            <Button id="calculateButton" text="Calculate" press=".onCalculate"/>
+            <Text text="Result:" id="resultText" class="sapUiTinyMarginTop"/>
         </content>
     </Page>
 </mvc:View>
